@@ -4,29 +4,30 @@
 The connection is established using TCP and server is able to serve multiple clients.
 It will take URLs and scraps it, showing how many images/paragraphs the link has.
 
+Command to install requirements:
+pip install requirements.txt
+
 Command to run it:
-&nbsp;&nbsp;&nbsp; _python webscrapper.py server_
+_python webscraper.py server_
   
-Following options are available:  
+  
 * --host "host"  
+Provides an interface for the server. Default - 127.0.0.1
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Provides an interface for server to listen to. Default value is 127.0.0.1.
-* --port port  
- 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Provides port for server to listen. Default value is default TCP port - 1060  (should be integer).
+* --port "port"  
+Provides a port for server to listen. Integer required. Default value - 1060.
 
-## Client
-Client is able to send reqests containg any arbitrary url to the server, in order to get the results of webscrapping.
+## Client side
+
 To run the script as a client the following command in used:  
-&nbsp;&nbsp;&nbsp; _python webscrapper.py server -p url_
+_python webscraper.py server -p url_
 
-Following runnning option are available:
-* --host "host"
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Provides an host to the client to connect to. Default value is 127.0.0.1.
-* --port port
+* --host "host"  
+Provides an interface for the server. Default - 127.0.0.1
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Provides a port to the client to connect to. Default value is default TCP port - 1060 (should be integer).
+* --port "port"  
+Provides a port for server to listen. Integer required. Default value - 1060.
+
 * -p url
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Page option is used to provide and url to the server. This option is mandatory, so that server will be able to handle request. 
+Mandatory option, as URL needs to be entered to start the scraping service.
